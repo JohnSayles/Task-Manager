@@ -1,0 +1,56 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif; /* Clean, simple font */
+  background-color: #f4f4f4; /* Light grey background */
+  color: #333; /* Dark grey text for readability */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Central container for content */
+.container {
+  width: 300px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+h1 {
+  font-size: 24px; /* Larger font size for headings */
+  color: #5a5a5a; /* Soft black */
+  text-align: center; /* Center-align the heading */
+}
+
+/* Styling form elements */
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.btn {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Additional styles for the register button to differentiate */
+input[name="regisbtn"] {
+  background-color: #f44336; /* Red background for contrast */
+}
+
+input[name="regisbtn"]:hover {
+  background-color: #e53935; /* Slightly darker red on hover */}

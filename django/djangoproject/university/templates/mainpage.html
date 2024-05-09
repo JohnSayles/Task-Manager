@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block container %}
+
+<h1>Your Groups</h1>
+
+<table>
+  <tr><th>Group Name</th><th>Admin</th><th>unique ID</th></tr>
+    {% for group in groups %}
+      <tr>
+        <td>{{group.name}}</td>
+        <td>{{group.admin_id.name}}</td>
+        <td>{{group.id}}</td>
+      </tr>
+    {% endfor %}
+    <!-- Submission to select certain group given Group ID-->
+    <tr>
+      <form action="#" method="get">
+        <input type="text" value="Group ID" name="groupID" size="10"/>
+        <input type="submit" class="btn" value="Select" name="getGroupData">
+      </form> 
+    </tr>   
+</table>
+
+<h2>Current Group</h2>
+
+<table>
+  <tr><th>Page Name</th><th>unique ID</th></tr>
+  {% for page in pages %}
+    <tr>
+      <td>{{page.title}}</td>
+      <td>{{page.id}}</td>
+    </tr>
+  {% endfor %}
+  <tr>
+    <form action="#" method="get">
+      <input type="text" value="Page ID" name="pageID" size="10"/>
+      <input type="submit" class="btn" value="Select" name="getPageData">
+    </form> 
+  </tr>
+</table>
+
+<h2>Current Page</h2>
+
+<table>
+  <tr><th>Note Content</th><th>Note Due Date</th></tr>
+    {% for note in notes %}
+      <tr>
+        <td>{{note.content}}</td>
+        <td>{{note.due_date}}</td>
+        </tr>
+    {% endfor %}
+  </table>
+
+<h2>Current Note</h2>
+
+<form action="#" method="get">
+  <textarea id="noteContent" name="noteContent" rows="4" cols="50">
+  </textarea>
+  <input type ="date" name="dateData"/>
+  <input type="text" value="page ID" name="pageAppend" size="10"/>
+  <input type="submit" class="btn" value="Submit Note" name="subNote">
+</form>
+
+<form action="#" method="get">
+  <input type="submit" class="btn" value="Log out" name="logoutbtn">
+</form>
+
+
+{% endblock %}
